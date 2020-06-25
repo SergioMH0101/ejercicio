@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+ 	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<script src="/js/jquery-3.4.1.js" th:href="@{/js/jquery-3.4.1.js}"></script>
+  	<script src="/js/Goles.js" th:href="@{/js/Goles.js}"></script>
+	<script src="/js/Goles.js"></script>
+  	
+</head>
+<body>
+		<div class="container-fluid" style="background-color:00ff00;color:#00ff00;height:100%;">
+  			<h3>Ejercicio Curso FullStack Trainee </h3>
+		</div>
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+  				<div class="navbar-header">
+  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  				    	<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>
+        				<span class="icon-bar"></span>                        
+      				</button>
+      				<a class="navbar-brand" href="#">Menu</a>
+      			</div>
+  			</div>
+  		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav">
+		    <li><a href="/">Inicio</a></li>
+		    <li><a href="/Goles">Goles</a></li>
+		  </ul>
+	  	</div>
+
+	</nav>
+	<form>
+	     			<h3>Administrar goles</h3>
+	     			<p>
+				    <div class="form-group">
+				      <label for=jug_rut>rut:</label>
+				      <input type="number" class="form-control" id="jug_rut" placeholder="Ingresar Rut" name="jug_rut">
+				    </div>
+				    <div class="form-group">
+				      <label for="jug_nombre">Nombre Jugador:</label>
+				      <input type="text" class="form-control" id="jug_nombre" placeholder="Ingresar nombre" name="jug_nombre">
+				    </div>
+				    <div class="form-group">
+				      <label for=equ_cod>Codigo de Equipo:</label>
+				      <input type="number" class="form-control" id="equ_cod" placeholder="Ingresar codigo de equipo" name="equ_cod">
+				    </div>
+				    <div class="form-group">
+				      <label for="gol_cantidad">GOL_cantidad:</label>
+				      <input type="number" class="form-control" id="gol_cantidad" placeholder="Ingresar gol_cantidad" name="gol_cantidad">
+				    </div>
+				    <p>
+				    <div class="alert alert-danger" id="msg" hidden="true">
+					</div>
+					<p>
+				   <div class="btn-group">
+					<button type="button" class="btn btn-primary btn-sml" onclick="javascript:GolesController('get')">Buscar </button>
+					<button type="button" class="btn btn-primary btn-sml" onclick="javascript:GolesController('update')">Actualizar </button>
+					
+				</div>
+			</form>
+			<div id="goles"></div>
+
+	<script type="text/javascript" src="/js/bootstrap.js" th:href="@{/js/bootstrap.js}"></script>
+</body>
+</html>
